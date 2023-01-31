@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('yeasts', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->text('description')->nullable();
+            $table->string('type');
+            $table->string('form');
+            $table->tinyInteger('atten');
             $table->timestamps();
         });
     }
