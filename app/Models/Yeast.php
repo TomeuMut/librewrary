@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Yeast extends Model
 {
     use HasFactory;
+
+    public function recipes()
+    {
+        return $this->belongsToMany(Recipe::class,'recipe_yeast');
+    }
 }

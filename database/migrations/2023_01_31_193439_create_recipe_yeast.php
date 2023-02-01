@@ -13,9 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('other_ingredients', function (Blueprint $table) {
+        Schema::create('recipe_yeast', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->integer('recipe_id');
+            $table->integer('yeast_id');
+            $table->integer('yeast_spin_pos');
+            $table->integer('yeast_temp');
+            $table->integer('yeast_atten');
+            $table->string('yeast_type');
+            $table->string('yeast_forma');
             $table->timestamps();
         });
     }
@@ -27,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('other_ingredients');
+        Schema::dropIfExists('recipe_yeast');
     }
 };

@@ -13,9 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('other_ingredients', function (Blueprint $table) {
+        Schema::create('recipe_grain', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->integer('recipe_id');
+            $table->integer('grain_id');
+            $table->decimal('grain_massa', 16, 15);
+            $table->decimal('grain_color', 18, 14);
+            $table->decimal('grain_extract', 15, 13);
+            $table->decimal('grain_percent', 4, 1);
+            $table->tinyInteger('grain_spin_pos');
             $table->timestamps();
         });
     }
@@ -27,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('other_ingredients');
+        Schema::dropIfExists('recipe_grain');
     }
 };

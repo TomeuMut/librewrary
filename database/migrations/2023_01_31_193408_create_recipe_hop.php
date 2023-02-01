@@ -13,9 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('other_ingredients', function (Blueprint $table) {
+        Schema::create('recipe_hop', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->integer('recipe_id');
+            $table->integer('hop_id');
+            $table->decimal('hop_time', 3, 1);
+            $table->decimal('hop_massa', 4, 1);
+            $table->decimal('hop_alfa', 16, 14);
+            $table->tinyInteger('hop_gran');
+            $table->tinyInteger('hop_spin_pos');
             $table->timestamps();
         });
     }
@@ -27,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('other_ingredients');
+        Schema::dropIfExists('recipe_hop');
     }
 };
