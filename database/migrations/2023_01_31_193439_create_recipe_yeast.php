@@ -15,6 +15,13 @@ return new class extends Migration
     {
         Schema::create('recipe_yeast', function (Blueprint $table) {
             $table->id();
+            $table->integer('recipe_id');
+            $table->integer('yeast_id');
+            $table->integer('yeast_spin_pos');
+            $table->integer('yeast_temp');
+            $table->integer('yeast_atten');
+            $table->string('yeast_type');
+            $table->string('yeast_forma');
             $table->timestamps();
         });
     }
