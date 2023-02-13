@@ -30,33 +30,63 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+
 Route::get('/dashboard/recipes', function () {
+    return view('backend.list_recipes');
+})->middleware(['auth', 'verified'])->name('list_recipes');
+
+
+Route::get('/dashboard/recipes/create', function () {
     return view('backend.recipes');
 })->middleware(['auth', 'verified'])->name('recipes');
 
 
+Route::get('/dashboard/grain/create', function () {
+    return view('backend.grain');
+})->middleware(['auth', 'verified'])->name('grain');
+
+Route::get('/dashboard/grain', function () {
+    return view('backend.list_grain');
+})->middleware(['auth', 'verified'])->name('list_grain');
+
 Route::get('/dashboard/hop', function () {
+    return view('backend.list_hop');
+})->middleware(['auth', 'verified'])->name('list_hop');
+
+Route::get('/dashboard/hop/create', function () {
     return view('backend.hop');
 })->middleware(['auth', 'verified'])->name('hop');
 
 
-Route::get('/dashboard/grain', function () {
-    return view('backend.grain');
-})->middleware(['auth', 'verified'])->name('grain');
-
-
 Route::get('/dashboard/yeast', function () {
+    return view('backend.list_yeast');
+})->middleware(['auth', 'verified'])->name('list_yeast');
+
+Route::get('/dashboard/yeast/create', function () {
     return view('backend.yeast');
 })->middleware(['auth', 'verified'])->name('yeast');
 
 
 Route::get('/dashboard/fermentable', function () {
+    return view('backend.list_fermentable');
+})->middleware(['auth', 'verified'])->name('list_fermentable');
+
+Route::get('/dashboard/yeast', function () {
+    return view('backend.list_yeast');
+})->middleware(['auth', 'verified'])->name('list_yeast');
+
+Route::get('/dashboard/fermentable/create', function () {
     return view('backend.fermentable');
 })->middleware(['auth', 'verified'])->name('fermentable');
 
-Route::get('/dashboard/other_ingredients', function () {
+Route::get('/dashboard/other_ingredients/create', function () {
     return view('backend.other_ingredients');
 })->middleware(['auth', 'verified'])->name('other_ingredients');
+
+Route::get('/dashboard/other_ingredients', function () {
+    return view('backend.list_other_ingredients');
+})->middleware(['auth', 'verified'])->name('list_other_ingredients');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
