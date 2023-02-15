@@ -15,37 +15,37 @@
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-4">
                             <x-nav-link class="bg-[#3D8361] text-white px-3 py-2 rounded-md text-sm font-medium"
-                                :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                                :href="route('dashboard')">
                                 {{ __('Dashboard') }}
                             </x-nav-link>
                             <x-nav-link
                                 class="text-gray-300 hover:bg-[#3D8361] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                                :href="route('list_recipes')" :active="request()->routeIs('recipe')">
+                                :href="route('list_recipes')">
                                 {{ __('Recetas') }}
                             </x-nav-link>
                             <x-nav-link
                                 class="text-gray-300 hover:bg-[#3D8361] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                                :href="route('list_grain')" :active="request()->routeIs('grain')">
+                                :href="route('list_grain')">
                                 {{ __('Maltas') }}
                             </x-nav-link>
                             <x-nav-link
                                 class="text-gray-300 hover:bg-[#3D8361] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                                :href="route('list_hop')" :active="request()->routeIs('hop')">
+                                :href="route('list_hop')">
                                 {{ __('Lúpulos') }}
                             </x-nav-link>
                             <x-nav-link
                                 class="text-gray-300 hover:bg-[#3D8361] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                                :href="route('list_yeast')" :active="request()->routeIs('yeast')">
+                                :href="route('list_yeast')">
                                 {{ __('Levaduras') }}
                             </x-nav-link>
                             <x-nav-link
                                 class="text-gray-300 hover:bg-[#3D8361] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                                :href="route('list_fermentable')" :active="request()->routeIs('fermentable')">
+                                :href="route('list_fermentable')">
                                 {{ __('Fermentados') }}
                             </x-nav-link>
                             <x-nav-link
                                 class="text-gray-300 hover:bg-[#3D8361] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                                :href="route('list_other_ingredients')" :active="request()->routeIs('other_ingredients')">
+                                :href="route('list_other_ingredients')">
                                 {{ __('Otros Ingredientes') }}
                             </x-nav-link>
                         </div>
