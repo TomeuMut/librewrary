@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\HopController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -49,13 +50,23 @@ Route::get('/dashboard/grain', function () {
     return view('backend.list_grain');
 })->middleware(['auth', 'verified'])->name('list_grain');
 
-Route::get('/dashboard/hop', function () {
+
+// CRUD de los Lupulo
+Route::get('/dashboard/hop', [HopController::class, 'index'], function () {
     return view('backend.list_hop');
 })->middleware(['auth', 'verified'])->name('list_hop');
 
 Route::get('/dashboard/hop/create', function () {
     return view('backend.hop');
 })->middleware(['auth', 'verified'])->name('hop');
+
+Route::post('/dashboard/hop', [HopController::class, 'store'])->name('hop.store');
+
+Route::get('/dashboard/hop/{id}', [HopController::class, 'edit'])->name('hop.edit');
+
+Route::post('/dashboard/hop/{id}', [HopController::class, 'update'])->name('hop.update');
+
+Route::get('/dashboard/hop/{id}/delete', [HopController::class, 'destroy'])->name('hop.destroy');
 
 
 Route::get('/dashboard/yeast', function () {
