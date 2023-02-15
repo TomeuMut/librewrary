@@ -3,8 +3,8 @@
 
 @section('body')
 
-<div>
-    <img src="{{ URL::to('/') }}/img/banner.jpg" alt="">
+<div>    
+    <img src="https://source.unsplash.com/1920x750/?brew" alt="">
 </div>
 <div class="flex">
     <div class="px-6 py-4 text-center items-center justify-center flex flex-col w-1/2">
