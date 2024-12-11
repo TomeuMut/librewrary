@@ -36,25 +36,18 @@
         </a>
     </div>
     <div class="px-6 py-4 flex">
-        <div>
-            <a href="#"
-                class="px-6 py-4 text-l text-white hover:text-primary-default hover:underline transition-all duration-100">Home</a>
-        </div>
-        <div>
-            <a href="#"
-                class="px-6 py-4 text-l text-white hover:text-primary-default hover:underline transition-all duration-100">Recetas</a>
-        </div>
-        <div>
-            <a href="#"
-                class="px-6 py-4 text-l text-white hover:text-primary-default hover:underline transition-all duration-100">Reseñas</a>
-        </div>
-        <div>
-            <a href="#"
-                class="px-6 py-4 text-l text-white hover:text-primary-default hover:underline transition-all duration-100">Blog</a>
-        </div>
+        
     </div>
     @if (Route::has('login'))
-        <div class="hidden  top-0 right-0 px-6 py-4 sm:block">
+        <div class="hidden  top-0 right-0 px-6 py-4 sm:block">            
+            <a href="#"
+                class="px-6 py-4 text-l text-white hover:text-primary-default hover:underline transition-all duration-100">Home</a>        
+            <a href="#"
+                class="px-6 py-4 text-l text-white hover:text-primary-default hover:underline transition-all duration-100">Recetas</a>        
+            <a href="#"
+                class="px-6 py-4 text-l text-white hover:text-primary-default hover:underline transition-all duration-100">Reseñas</a>        
+            <a href="#"
+                class="px-6 py-4 text-l text-white hover:text-primary-default hover:underline transition-all duration-100">Blog</a>            
             @auth
                 <a href="{{ url('/dashboard') }}"
                     class="text-l text-white hover:text-primary-default hover:underline transition-all duration-100">Dashboard</a>

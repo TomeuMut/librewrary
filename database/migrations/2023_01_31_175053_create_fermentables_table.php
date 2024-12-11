@@ -13,8 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('fermentables', function (Blueprint $table) {
+        Schema::create('fermentables', function (Blueprint $table) {            
             $table->id();
+            $table->string('name');
+            $table->text('description')->nullable();
+            $table->decimal('color', 5, 1);
+            $table->decimal('extract', 3, 1);            
+            $table->decimal('percent', 4, 1);
+            $table->string('fermentable');
+            $table->string('type');
             $table->timestamps();
         });
     }
